@@ -5,7 +5,6 @@ This script creates the alx_book_store database in MySQL server.
 """
 
 import mysql.connector
-from mysql.connector import Error
 
 def create_database():
     """
@@ -37,7 +36,7 @@ def create_database():
             
             cursor.close()
             
-    except Error as e:
+    except mysql.connector.Error as e:
         print(f"Error connecting to MySQL: {e}")
         
     finally:
